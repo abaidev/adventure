@@ -1,6 +1,6 @@
 FROM python:3.7.9
 
-WORKDIR /dev
+WORKDIR /sibdev_github
 
 COPY ./requirements.txt /requirements.txt
 
