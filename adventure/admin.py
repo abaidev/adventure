@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Transaction, TransactionFile
 
-# Register your models here.
+admin.site.register(Transaction)
+admin.site.register(TransactionFile)
