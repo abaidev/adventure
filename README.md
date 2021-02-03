@@ -13,6 +13,11 @@ Frontend реализован с использованием простого R
 Для доступа в панель админа необходимо выполнить комманду 
 `python manage.py createsuperuser` в cli контейнера Docker Desktop или посредством
 `docker exec -ti my_container sh -c "python manage.py createsuperuser"`
+##### Git
+Если используете OS Windows, перед скачиванием убедитесь что 
+`git config --global core.autocrlf false` иначе в файле entrypoint.sh 
+могут быть неверные окончания (CRLF вместо LF)
+
 
 ## Remove container (Ликвидация контейнера)
 `docker-compose down` команда для удаления собранного контейнера
