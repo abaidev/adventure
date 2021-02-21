@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
 
-class TransactionFile(models.Model):    # для того чтобы сохранять файл только в одном instance
+class TransactionFile(models.Model):
     file = models.FileField(upload_to='transactions')
     date = models.DateTimeField(auto_now_add=True)
 
@@ -25,7 +25,7 @@ class Transaction(models.Model):
         super(Transaction, self).save( *args, **kwargs)
 
 '''
-по идее лучше всего чтобы модель Transaction брала ForeignKey от модели Customer
+TODO: по идее лучше всего чтобы модель Transaction брала ForeignKey от модели Customer
 '''
 class Customer(models.Model):
     username = models.CharField(max_length=250)

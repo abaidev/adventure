@@ -29,7 +29,6 @@ class TransCreateSerializer(serializers.Serializer):
         enc_file = TextIOWrapper(file.file.file, encoding='utf-8')
         read_dict = csv.DictReader(enc_file)
         for row in read_dict:
-            print(row['item'], row['customer'], row['quantity'])
             Transaction.objects.create(
                 customer = row['customer'],
                 item = row['item'],
